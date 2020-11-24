@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "45040d89-5d68-49eb-8512-c8c9021ab0e1",
+		"name": "jokenpoAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/v1/increment/player/Bianca",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/increment/player/Bianca",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"increment",
+						"player",
+						"Bianca"
+					]
+				},
+				"description": "This endpoint is responsible for registering players on the game. Only the name is sent to register."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/v1/players",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/players",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"players"
+					]
+				},
+				"description": "This endpoint is responsible for getting all players."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/v1/decrement/player/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/decrement/player/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"decrement",
+						"player",
+						"1"
+					]
+				},
+				"description": "This endpoint is responsible for deleting a player. You only need to send the player's Id."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/v1/play",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n[\r\n    {\r\n        \"jogador\": \"Bianca\",\r\n        \"jogada\": \"PEDRA\"\r\n    },\r\n    {\r\n        \"jogador\": \"Diogo\",\r\n        \"jogada\": \"TESOURA\"\r\n    }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/play",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"play"
+					]
+				},
+				"description": "This endpoint is responsible for receiving players and their moves. Each player and their respective move is considered an entry."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
